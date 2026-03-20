@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeChat — Быстрый и безопасный мессенджер</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 25px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .logo span {
+            font-size: 48px;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 40px;
+        }
+
+        .download-card {
+            background: white;
+            border-radius: 30px;
+            padding: 40px;
+            max-width: 500px;
+            margin: 0 auto 40px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .version {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px 40px;
+            border-radius: 60px;
+            text-decoration: none;
+            margin: 20px 0;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .file-size {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .feature {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .feature h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .telegram-link {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .telegram-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #0088cc;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .telegram-btn:hover {
+            background: #006699;
+        }
+
+        .footer {
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .footer a {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 32px; }
+            .subtitle { font-size: 16px; }
+            .download-btn { font-size: 18px; padding: 15px 30px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="logo">
+            <span>💬</span>
+        </div>
+        <h1>MeChat</h1>
+        <div class="subtitle">
+            Быстрый и безопасный мессенджер<br>
+            Общайся с друзьями без ограничений
+        </div>
+    </div>
+
+    <div class="download-card">
+        <div class="version">
+            Версия 1.0 | Android 6.0+
+        </div>
+        <a href="mechat.apk" class="download-btn" download>
+            📱 Скачать MeChat
+        </a>
+        <div class="file-size">
+            Размер: ~15 МБ
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <div class="feature-icon">💬</div>
+            <h3>Личные и групповые чаты</h3>
+            <p>Общайся с друзьями один на один или создавай группы до 100 человек</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">📸</div>
+            <h3>Отправка фото</h3>
+            <p>Делись моментами из жизни — отправляй фото прямо в чат</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🔔</div>
+            <h3>Push-уведомления</h3>
+            <p>Не пропускай важные сообщения с мгновенными уведомлениями</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🛡️</div>
+            <h3>Безопасность</h3>
+            <p>Все сообщения защищены и хранятся в надежном облаке</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🟢</div>
+            <h3>Статус "онлайн"</h3>
+            <p>Види, кто из друзей сейчас в сети</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🗑️</div>
+            <h3>Удаление сообщений</h3>
+            <p>Удаляй отправленные сообщения для всех</p>
+        </div>
+    </div>
+
+    <div class="telegram-link">
+        <a href="https://t.me/mechat_app" class="telegram-btn">
+            ✈️ Telegram-канал
+        </a>
+        <p style="margin-top: 12px; color: rgba(255,255,255,0.8);">
+            Подпишись, чтобы получать обновления
+        </p>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 MeChat. Все права защищены.</p>
+        <p>
+            <a href="privacy.html">Политика конфиденциальности</a> |
+            <a href="https://t.me/mechat_support">Поддержка</a>
+        </p>
+    </div>
+</div>
+</body>
+</html>
