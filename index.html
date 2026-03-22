@@ -13,9 +13,9 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0A0A0A 0%, #1A1A2E 100%);
             min-height: 100vh;
-            color: #333;
+            color: #E8E8E8;
         }
 
         .container {
@@ -32,13 +32,13 @@
         .logo {
             width: 100px;
             height: 100px;
-            background: white;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-radius: 25px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
         }
 
         .logo span {
@@ -53,22 +53,23 @@
 
         .subtitle {
             font-size: 20px;
-            color: rgba(255,255,255,0.9);
+            color: rgba(255,255,255,0.7);
             margin-bottom: 40px;
         }
 
         .download-card {
-            background: white;
+            background: #1A1A2E;
             border-radius: 30px;
             padding: 40px;
             max-width: 500px;
             margin: 0 auto 40px;
             text-align: center;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         .version {
-            color: #666;
+            color: #888;
             margin-bottom: 20px;
             font-size: 14px;
         }
@@ -84,16 +85,16 @@
             text-decoration: none;
             margin: 20px 0;
             transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
         }
 
         .download-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
 
         .file-size {
-            color: #666;
+            color: #888;
             font-size: 14px;
         }
 
@@ -105,15 +106,17 @@
         }
 
         .feature {
-            background: white;
+            background: #1A1A2E;
             padding: 30px;
             border-radius: 20px;
             text-align: center;
             transition: transform 0.3s;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         .feature:hover {
             transform: translateY(-5px);
+            border-color: #667eea;
         }
 
         .feature-icon {
@@ -124,51 +127,121 @@
         .feature h3 {
             font-size: 20px;
             margin-bottom: 10px;
+            color: white;
         }
 
         .feature p {
-            color: #666;
+            color: #888;
             line-height: 1.5;
         }
 
-        .telegram-link {
+        /* Секция патч-ноутов */
+        .changelog-section {
+            background: #1A1A2E;
+            border-radius: 30px;
+            padding: 40px;
+            margin: 60px 0;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .changelog-title {
+            font-size: 28px;
+            margin-bottom: 30px;
             text-align: center;
-            margin: 40px 0;
-        }
-
-        .telegram-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: #0088cc;
             color: white;
-            padding: 12px 24px;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s;
         }
 
-        .telegram-btn:hover {
-            background: #006699;
+        .version-item {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .version-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .version-header {
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .version-number {
+            font-size: 20px;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .version-date {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .version-badge {
+            background: #2A2A2A;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #888;
+        }
+
+        .changes-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .changes-list li {
+            margin-bottom: 8px;
+            padding-left: 24px;
+            position: relative;
+            color: #aaa;
+        }
+
+        .changes-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+        }
+
+        .changes-list li.fix:before {
+            content: "🔧";
+            color: #ff9800;
+        }
+
+        .changes-list li.new:before {
+            content: "✨";
+            color: #667eea;
         }
 
         .footer {
             text-align: center;
-            color: rgba(255,255,255,0.7);
+            color: rgba(255,255,255,0.5);
             margin-top: 60px;
             padding-top: 40px;
-            border-top: 1px solid rgba(255,255,255,0.2);
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
 
         .footer a {
-            color: white;
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
             h1 { font-size: 32px; }
             .subtitle { font-size: 16px; }
             .download-btn { font-size: 18px; padding: 15px 30px; }
+            .changelog-title { font-size: 22px; }
+            .version-header { flex-direction: column; gap: 8px; }
         }
     </style>
 </head>
@@ -187,7 +260,7 @@
 
     <div class="download-card">
         <div class="version">
-            Версия 1.0 | Android 6.0+
+            Актуальная версия: 1.1 | Android 6.0+
         </div>
         <a href="mechat.apk" class="download-btn" download>
             📱 Скачать MeChat
@@ -197,26 +270,50 @@
         </div>
     </div>
 
+    <!-- Секция с изменениями -->
+    <div class="changelog-section">
+        <h2 class="changelog-title">📋 Что нового</h2>
+
+        <div class="version-item">
+            <div class="version-header">
+                <span class="version-number">Версия 1.1</span>
+                <span class="version-date">22 марта 2026</span>
+                <span class="version-badge">Текущая</span>
+            </div>
+            <ul class="changes-list">
+                <li class="new">✨ Добавлена проверка уникальности никнейма при регистрации</li>
+                <li class="new">✨ Возможность сменить никнейм в профиле</li>
+                <li class="new">✨ Обновленный дизайн экрана чатов — всё в одной кнопке меню</li>
+                <li class="new">✨ Статус "онлайн" в реальном времени</li>
+                <li class="new">✨ Удаление сообщений "для себя" и "для всех"</li>
+                <li class="fix">🔧 Исправлено отображение времени в сообщениях собеседника</li>
+                <li class="fix">🔧 Оптимизирована загрузка списка чатов</li>
+            </ul>
+        </div>
+
+        <div class="version-item">
+            <div class="version-header">
+                <span class="version-number">Версия 1.0</span>
+                <span class="version-date">15 марта 2026</span>
+                <span class="version-badge">Первый релиз</span>
+            </div>
+            <ul class="changes-list">
+                <li>✨ Регистрация и вход через email</li>
+                <li>✨ Система друзей — поиск, заявки, добавление</li>
+                <li>✨ Личные и групповые чаты</li>
+                <li>✨ Отправка текстовых сообщений в реальном времени</li>
+                <li>✨ Push-уведомления о новых сообщениях</li>
+                <li>✨ Удаление чатов по долгому нажатию</li>
+                <li>✨ Темная тема оформления</li>
+            </ul>
+        </div>
+    </div>
+
     <div class="features">
         <div class="feature">
             <div class="feature-icon">💬</div>
             <h3>Личные и групповые чаты</h3>
-            <p>Общайся с друзьями один на один или создавай группы до 100 человек</p>
-        </div>
-        <div class="feature">
-            <div class="feature-icon">📸</div>
-            <h3>Отправка фото</h3>
-            <p>Делись моментами из жизни — отправляй фото прямо в чат</p>
-        </div>
-        <div class="feature">
-            <div class="feature-icon">🔔</div>
-            <h3>Push-уведомления</h3>
-            <p>Не пропускай важные сообщения с мгновенными уведомлениями</p>
-        </div>
-        <div class="feature">
-            <div class="feature-icon">🛡️</div>
-            <h3>Безопасность</h3>
-            <p>Все сообщения защищены и хранятся в надежном облаке</p>
+            <p>Общайся с друзьями один на один или создавай группы</p>
         </div>
         <div class="feature">
             <div class="feature-icon">🟢</div>
@@ -224,26 +321,31 @@
             <p>Види, кто из друзей сейчас в сети</p>
         </div>
         <div class="feature">
+            <div class="feature-icon">🔔</div>
+            <h3>Push-уведомления</h3>
+            <p>Не пропускай важные сообщения</p>
+        </div>
+        <div class="feature">
             <div class="feature-icon">🗑️</div>
             <h3>Удаление сообщений</h3>
             <p>Удаляй отправленные сообщения для всех</p>
         </div>
-    </div>
-
-    <div class="telegram-link">
-        <a href="https://t.me/mechat_app" class="telegram-btn">
-            ✈️ Telegram-канал
-        </a>
-        <p style="margin-top: 12px; color: rgba(255,255,255,0.8);">
-            Подпишись, чтобы получать обновления
-        </p>
+        <div class="feature">
+            <div class="feature-icon">🛡️</div>
+            <h3>Безопасность</h3>
+            <p>Все сообщения защищены</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">👤</div>
+            <h3>Смена никнейма</h3>
+            <p>Меняй имя в любой момент</p>
+        </div>
     </div>
 
     <div class="footer">
-        <p>© 2025 MeChat. Все права защищены.</p>
+        <p>© 2026 MeChat. Все права защищены.</p>
         <p>
-            <a href="privacy.html">Политика конфиденциальности</a> |
-            <a href="https://t.me/mechat_support">Поддержка</a>
+            <a href="privacy.html">Политика конфиденциальности</a>
         </p>
     </div>
 </div>
